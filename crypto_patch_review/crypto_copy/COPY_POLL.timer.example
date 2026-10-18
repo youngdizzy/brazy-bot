@@ -1,0 +1,19 @@
+# /etc/systemd/system/brazy-copypoll.service
+[Unit]
+Description=Brazy Bot copy poll once
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/brazy
+EnvironmentFile=/opt/brazy/.env
+ExecStart=/opt/brazy/venv/bin/python -c "from pathlib import Path; from crypto_copy.storage import CopyStorage; from crypto_copy.copy_engine import CopyEngine; import os; e=CopyEngine(CopyStorage(Path('data/copy'))); print('manual poll placeholder — use Telegram /copypoll')"
+
+# /etc/systemd/system/brazy-copypoll.timer
+# [Unit]
+# Description=Poll every 2 min
+# [Timer]
+# OnBootSec=60
+# OnUnitActiveSec=120
+# [Install]
+# WantedBy=timers.target

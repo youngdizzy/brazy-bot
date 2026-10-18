@@ -1,0 +1,50 @@
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials/
+
+# Python environments and caches
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# User data and runtime state
+data/
+data.*/
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# Backups and temporary versions
+backups/
+backup_*/
+staging_*/
+*.bak
+*.bak.*
+*.backup
+*.backup*
+*.pre_*
+*.working_*
+*.new
+*.timeout-backup
+
+# Archives and generated artifacts
+*.zip
+.DS_Store
+
+# Additional historical bot versions and stray command-output files
+*.py.bak_*
+*.py.before_*
+*.py.pre_*
+*.py.working_*
+*.py.timeout-backup
+"o systemctl"*
